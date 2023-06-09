@@ -1,0 +1,67 @@
+# +---------------------------+
+# |     StaminaSystem v0.6    |
+# +---------------------------+
+# | Author: FoxWorn3365
+# | GitHub: https://github.com/FoxWorn3365
+# | License: MIT
+# | Please include the credits!
+# +---------------------------+
+enabled: true                          # [BOOL] Whether the plugin is enabled
+
+# STAMINA OBTAINING SYSTEM CONFIG
+waiting-moves-before-regenerate: 10    # [INT] How much movements must a player do before the stamina restart regenerating?
+max-stamina: 100                       # [INT] The max stamina level
+stamina-per-move: 0.5                  # [INT-FLOAT(double)] How much stamina should be added for every move?
+bed-restore-stamina: false             # [BOOL] Should bed restore stamina?
+bed-restore-stamina-level: 10          # [INT-FLOAT(double)] How much stamina should be given to a player ho have slept? ONLY IF bed-restore-stamina IS TRUE!
+do-food-regen: true                    # [BOOL] Do the food regen the stamina?
+level-for-negative-effects: 10         # [INT] If stamina is <= to this level will have some negatives effect like slowness and other
+
+# STAMINA PERKS
+stamina-hit-cost: 1                    # [INT-FLOAT(double)] How much stamina do we need to remove from a player if we help with a hit?
+stamina-run-cost: 0.1                  # [INT-FLOAT(double)] How much stamina do we have to remove from a player when it run?
+stamina-block-break-cost: 0.1          # [INT-FLOAT(double)] How much stamina do we have to remove from a player if we help it to break a block?
+
+# STAMINA POWERUP
+run-regenerate-stamina: false
+stamina-powerup:                       # [OBJECT] All items in this list will be increase the max stamina level
+  iron_sword: 10
+  diamond_sword: 20
+  diamond_boots: 50
+  diamond_axe: 100
+
+# FOOD REGENERATION SETTINGS
+stamina-food-regen:
+  default: 2
+  cooked_porkchop: 5
+  golder_apple: 10
+  enchanted_golden_apple: 75
+  apple: 4
+
+# ITEM REGENERATION SETTINGS
+item-regeneration:
+  golden_axe:
+    should-be-holded: true
+    amount: 2
+
+# STAMINA MANAGEMENT
+speed:
+  enabled: true
+  cost: 0.8
+  perk: 0.05
+hit:
+  enabled: true
+  cost: 1
+shield:
+  enabled: true
+  cost: 2
+shift-knockback:
+  enabled: true
+  cost: 0.8
+
+# DISPLAY SETTINGS
+rounding-stamina: true                 # [BOOL] Should stamina be rounded when displayed to a player?
+rounding-level: 0                      # [INT] How much?
+show-stamina-level: true               # [BOOL] Should the stamina level indicator (as Tip) be displayed to player?
+stamina-level-text: 'Stamina: %stamina%/%totalstamina%'  # [STRING] Set the stamina display text. Placeholders: %stamina% -> current stamina level    %totalstamina% -> max stamina for player
+stamina-refresh-rate: 2                # [INT] In tick, every when tick(s) should the player stamina tip be refreshed (so updated)?
