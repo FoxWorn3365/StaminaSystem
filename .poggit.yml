@@ -5,4 +5,5 @@ branches:
 projects:
   StaminaSystem:
     path: ""
+    icon: "stamina_plugin_icon.png"
 ...
