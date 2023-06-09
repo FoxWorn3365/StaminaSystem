@@ -64,6 +64,18 @@ In the case of object is used the PHP notation so `parent->child`
 | cost | int/float | N/D |
 | perk | ?int/float | N/D |
 
+## Roadmap
+- [x] Run perk
+- [x] Walk for stamina regeneration
+- [x] Autosave stamina
+- [x] Eat for stamina regeneration
+- [x] Item powerup and weight
+- [x] Async task to show stamina level
+- [x] More damage with stamina
+- [x] Stamina shield
+- [x] Stamina knockback
+- [ ] Stamina haste
+
 ## Contact me
 You can contact me via:
 - **Email:** `foxworn3365@gmail.com`
