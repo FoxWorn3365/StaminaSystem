@@ -178,7 +178,6 @@ class Core extends PluginBase implements Listener {
                 if ($damagerstamina->stamina <= $this->config->get('level-for-negative-effects', 10)) {
                     // Negative effect, ouch!
                     $event->setBaseDamage($event->getBaseDamage() - 0.5);
-                    $damager->sendMessage("Debug: Damaged with -0.5 because your stamina is under the level of good stamina");
                 } elseif ($damagerstamina->stamina >= $this->config->get('hit', ['cost' => 0.2])['cost'] && $this->config->get('hit', ['enabled' => true])['enabled']) {
                     // Now check the damage for shift-knockback config:
                     $data = $this->config->get('shift-knockback', ['enabled' => true, 'cost' => 0.85]);
@@ -187,7 +186,6 @@ class Core extends PluginBase implements Listener {
                     }
 
                     $event->setBaseDamage($event->getBaseDamage() + ($damagerstamina->stamina/(($damagerstamina->maxstamina/100)*20)));
-                    $damager->sendMessage("Debug: Good crit boy, now he will have less life! - Damage: " . $event->getBaseDamage());
                     $this->stamina->{$damager->getName()}->stamina = $this->stamina->{$damager->getName()}->stamina - $this->config->get('hit', ['cost' => 0.2])['cost'];
                 }
 
