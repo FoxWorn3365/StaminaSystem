@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/FoxWorn3365/StaminaSystem
+build-by-default: true
+branches:
+- main
+projects:
+  StaminaSystem:
+    path: ""
+...
