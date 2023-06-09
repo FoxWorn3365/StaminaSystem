@@ -1,6 +1,7 @@
 name: StaminaSystem
-version: 0.6
+version: 1.0
 api: [4.0.0, 5.0.0]
 main: FoxWorn3365\StaminaSystem\Core
 description: Improve your skills with stamina!
+website: https://github.com/FoxWorn3365/StaminaSystem
 author: FoxWorn3365
